@@ -1,0 +1,4 @@
+[
+  {"desc": "Vegan", "p": 0.2, "p_nums": [1, 2]},
+  {"desc": "Primal", "p": 0.8, "p_nums": [3, 10]}
+]

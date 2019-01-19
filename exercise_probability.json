@@ -1,0 +1,7 @@
+[
+  {"desc": "heavy_lift", "p": 0.1428, "p_nums": [1, 1428]},
+  {"desc": "sprint", "p": 0.285, "p_nums": [1429, 4277]},
+  {"desc": "light_lift", "p": 0.285, "p_nums": [4278, 7126]},
+  {"desc": "just_normal", "p": 0.1436, "p_nums": [7127, 8562]},
+  {"desc": "yoga", "p": 0.1436, "p_nums": [8563, 10000]}
+]
