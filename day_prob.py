@@ -1,6 +1,7 @@
 import json
 import random
 import datetime
+import requests
 
 with open("exercise_probability.json") as f:
     exercise_prob = json.load(f)
@@ -14,6 +15,20 @@ with open("fast_probability.json") as f:
 with open("dietary_style_probability.json") as f:
     dietary_style_prob = json.load(f)
 
+
+def random_seed():
+    url = "https://api.random.org/json-rpc/1/invoke"
+    headers = {'content-type': 'application/json'}
+    with open("random_api.json") as f:
+        payload = json.load(f)
+    response = requests.post(
+        url, data=json.dumps(payload), headers=headers).json()
+    rand_seed = response['result']['random']['data'][0]
+    print(rand_seed)
+    return rand_seed
+
+
+random.seed(a=random_seed())
 
 class Day:
     def __init__(self, eating_style=None, dietary_style=None, end_date=None, fast_duration=None, exercise_style=None):
