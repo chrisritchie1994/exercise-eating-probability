@@ -16,5 +16,12 @@ class Days(Base):
     fast_duration = Column(String(100))
     exercise_style = Column(String(100))
 
+class DaySeed(Base):
+    __tablename__ = 'day_seed'
+
+    id = Column(Integer, Sequence('day_seed_id_seq'), primary_key=True)
+    created_date = Column(DateTime, default=datetime.date.today())
+    seed = Column(Integer)
+
 Base.metadata.create_all(engine)
 

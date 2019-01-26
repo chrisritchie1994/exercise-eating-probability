@@ -28,7 +28,9 @@ def random_seed():
     return rand_seed
 
 
-random.seed(a=random_seed())
+rand_seed = random_seed()
+random.seed(a=rand_seed)
+
 
 class Day:
     def __init__(self, eating_style=None, dietary_style=None, end_date=None, fast_duration=None, exercise_style=None):

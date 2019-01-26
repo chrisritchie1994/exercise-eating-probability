@@ -14,7 +14,9 @@ def daily_execution():
     day_entry = Days(created_date=day.created_date, eating_style=day.eating_style,
                      dietary_style=day.dietary_style, end_date=day.end_date, fast_duration=day.fast_duration,
                      exercise_style=day.exercise_style)
+    day_seed_entry = DaySeed(seed=day_prob.rand_seed)
     session.add(day_entry)  # inserts into database
+    session.add(day_seed_entry)
     session.commit()
 
 
